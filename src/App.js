@@ -9,6 +9,7 @@ function App() {
         title={"Expense " + i}
         location={"Hyderabad"}
         amount={100 + j}
+        date={new Date(2023, 3, 4)}
       />
     );
   }
