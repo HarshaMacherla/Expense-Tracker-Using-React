@@ -2,7 +2,7 @@ import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 import "./ExpenseItem.css";
 
-export default function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   return (
     <div className="expense-item">
       <ExpenseDate date={props.date} />
@@ -13,4 +13,6 @@ export default function ExpenseItem(props) {
       />
     </div>
   );
-}
+};
+
+export default ExpenseItem;
