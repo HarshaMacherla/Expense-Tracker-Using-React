@@ -1,10 +1,15 @@
-export default function ExpenseItem() {
+import "./ExpenseItem.css";
+
+export default function ExpenseItem(props) {
+  const expenseDate = new Date(2023, 3, 4);
   return (
-    <div>
-      <h2>Expense Items</h2>
-      <p>Food Rs 10</p>
-      <p>Petrol Rs 100</p>
-      <p>Movies Rs 200</p>
+    <div className="expense-item">
+      <div>{expenseDate.toISOString()}</div>
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+        <h2>{props.location}</h2>
+        <div className="expense-item__price">${props.amount}</div>
+      </div>
     </div>
   );
 }
