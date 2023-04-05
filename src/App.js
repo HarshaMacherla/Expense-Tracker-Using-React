@@ -4,26 +4,26 @@ function App() {
   let expenseItems = [
     {
       id: "e1",
-      title: "New Table",
-      amount: 5000,
+      title: "Toilet Paper",
+      amount: 94.12,
       date: new Date(2023, 3, 4),
     },
     {
       id: "e2",
-      title: "New Desk",
-      amount: 15000,
+      title: "New TV",
+      amount: 799.49,
       date: new Date(2023, 3, 4),
     },
     {
       id: "e3",
-      title: "New Chair",
-      amount: 6000,
+      title: "Car Insurance",
+      amount: 294.67,
       date: new Date(2023, 3, 4),
     },
     {
       id: "e4",
-      title: "New Laptop",
-      amount: 150000,
+      title: "New Desk (Wooden)",
+      amount: 450,
       date: new Date(2023, 3, 4),
     },
   ];
