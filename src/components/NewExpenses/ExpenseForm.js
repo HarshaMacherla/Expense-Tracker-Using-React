@@ -24,10 +24,11 @@ const ExpenseForm = (props) => {
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
+      id: Math.random().toString(),
     };
 
     props.onAddingNewExpense(expenseDetails);
-
+    props.onClearingExpense();
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
@@ -42,7 +43,6 @@ const ExpenseForm = (props) => {
             type="text"
             value={enteredTitle}
             onChange={titleChangeHandler}
-            id="title"
           />
         </div>
         <div className="new-expense__control">
@@ -53,7 +53,6 @@ const ExpenseForm = (props) => {
             step="0.01"
             value={enteredAmount}
             onChange={amountChangeHandler}
-            id="amount"
           />
         </div>
         <div className="new-expense__control">
@@ -64,11 +63,13 @@ const ExpenseForm = (props) => {
             step="2023-04-05"
             value={enteredDate}
             onChange={dateChangeHandler}
-            id="date"
           />
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onClearingExpense}>
+          Clear
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
