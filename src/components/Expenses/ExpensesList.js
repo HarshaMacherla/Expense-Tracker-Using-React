@@ -8,7 +8,7 @@ const ExpensesList = (props) => {
     return [
       props.items.map((item) => (
         <ExpenseItem
-          key={item.id}
+          key={item.key}
           title={item.title}
           amount={item.amount}
           date={item.date}
@@ -18,19 +18,18 @@ const ExpensesList = (props) => {
         Only single Expense here. Please add more...
       </h2>,
     ];
-  else
-    return (
-      <ul className="expenses-list">
-        {props.items.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
-      </ul>
-    );
+  return (
+    <ul className="expenses-list">
+      {props.items.map((expense) => (
+        <ExpenseItem
+          key={expense.key}
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        />
+      ))}
+    </ul>
+  );
 };
 
 export default ExpensesList;
